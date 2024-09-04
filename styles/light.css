@@ -6,15 +6,15 @@
 
 .page.theme_light {
   --accent-color: #353430;
-  --text-shadow: #FFC2E6;
+  --text-shadow: #ffc2e6;
   --title-dark-color: #000028;
   --advice-text-color: #353430;
-  --link-shadow-color: #FF8DCB;
-  --header-theme-button-hover-color: #32312D66;
+  --link-shadow-color: #ff8dcb;
+  --header-theme-button-hover-color: #32312d66;
   --header-title-text-shadow-color: #ff070f;
   --background-picture: url(/images/cover-image-light.png);
   --rec-visibility: none;
-  --title-decor-color: #FF8DCB;
+  --title-decor-color: #ff8dcb;
   --title-description-color: #353430;
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -22,9 +22,10 @@
   */
 }
 
-
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   width: 375px;
   height: 668px;
   padding: 10px 10px 0 10px;
@@ -37,10 +38,12 @@
 
 .header {
   display: grid;
-  grid-template-rows: 176px 300px 148px 25px;
+  grid-template-rows: 176px 300px 148px;
   grid-template-columns: repeat(3, 1fr);
   justify-items: end;
   align-items: start;
+  max-block-size: min(100vh, 668px);
+  margin-block-end: 50px;
 }
 
 .decorated-zone::before {
@@ -170,7 +173,6 @@
 }
 
 .content {
-  padding-block-start: 49px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -248,7 +250,9 @@
 
 .footer {
   display: grid;
+  max-block-size: 100vh;
   grid-template-rows: 176px 300px 148px 25px;
+  max-block-size: min(100vh, 668px);
 }
 
 .footer .header-title {
@@ -264,6 +268,8 @@
   .header {
     grid-template-rows: 283px 423px 255px 25px;
     grid-template-columns: 242px 121px 121px 242px;
+    max-block-size: min(100vh, 1024px);
+    margin-block-end: 148px;
   }
   .header__theme-menu {
     grid-column-start: 4;
@@ -334,6 +340,7 @@
     grid-template-rows: 45px 1fr 45px;
     min-block-size: 984px;
     grid-auto-rows: 0;
+    max-block-size: min(100vh, 1024px);
   }
 }
 
@@ -341,11 +348,12 @@
   .page {
     padding: 20px 20px 0 20px;
     width: 1024px;
-    height: 768px;
+    max-block-size: min(100vh, 768px);
   }
   .header {
     grid-template-columns: 2fr 1fr 1fr 2fr;
-    grid-template-rows: 46px 403px 254px;
+    grid-template-rows: 46px 403px 253px 25px;
+    margin-block-end: 139px;
   }
   .header__theme-menu-list {
     grid-column-start: 2;
@@ -372,7 +380,6 @@
     align-self: center;
   }
   .content {
-    padding-block-start: var(--gap-between-sections);
     gap: var(--gap-between-sections);
   }
   .why {
@@ -416,7 +423,7 @@
     object-fit: cover;
   }
   .gallery-list {
-    gap: 0;
+    gap: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 260px 315px 432px;
@@ -424,7 +431,6 @@
       "sunset sunset ice-cream"
       "tape books ice-cream"
       "tape street street";
-    gap: var(--gap-between-content);
     margin-block-end: var(--gap-between-sections);
   }
   .gallery-list .image-street {
@@ -439,22 +445,26 @@
     grid-template-rows: 45px 639px 45px;
     min-block-size: 782px;
     grid-auto-rows: 0;
+    max-block-size: min(100vh, 768px);
   }
+}
+
+.no-margin {
+  margin: 0;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #353430;
-    --text-shadow: #FFC2E6;
+    --text-shadow: #ffc2e6;
     --title-dark-color: #000028;
     --advice-text-color: #353430;
-    --link-shadow-color: #FF8DCB;
-    --header-theme-button-hover-color: #32312D66;
+    --link-shadow-color: #ff8dcb;
+    --header-theme-button-hover-color: #32312d66;
     --header-title-text-shadow-color: #ff070f;
     --background-picture: url(/images/cover-image-light.png);
     --rec-visibility: none;
-    --title-decor-color: #FF8DCB;
+    --title-decor-color: #ff8dcb;
     --title-description-color: #353430;
-    }
+  }
 }
-
