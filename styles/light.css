@@ -16,6 +16,7 @@
   --rec-visibility: none;
   --title-decor-color: #ff8dcb;
   --title-description-color: #353430;
+  --block-size: min(100vh, 668px);
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
@@ -42,7 +43,7 @@
   grid-template-columns: repeat(3, 1fr);
   justify-items: end;
   align-items: start;
-  max-block-size: min(100vh, 668px);
+  max-block-size: var(--block-size);
   margin-block-end: 50px;
 }
 
@@ -252,7 +253,7 @@
   display: grid;
   max-block-size: 100vh;
   grid-template-rows: 176px 300px 148px 25px;
-  max-block-size: min(100vh, 668px);
+  max-block-size: var(--block-size);
 }
 
 .footer .header-title {
@@ -261,6 +262,7 @@
 
 @media (375px < width <= 768px) {
   .page {
+    --block-size: min(100vh, 1024px);
     width: 768px;
     height: 1024px;
     padding: 20px 20px 0 20px;
@@ -268,7 +270,7 @@
   .header {
     grid-template-rows: 283px 423px 255px 25px;
     grid-template-columns: 242px 121px 121px 242px;
-    max-block-size: min(100vh, 1024px);
+    max-block-size: var(--block-size);
     margin-block-end: 148px;
   }
   .header__theme-menu {
@@ -340,15 +342,16 @@
     grid-template-rows: 45px 1fr 45px;
     min-block-size: 984px;
     grid-auto-rows: 0;
-    max-block-size: min(100vh, 1024px);
+    max-block-size: var(--block-size);
   }
 }
 
 @media (768px < width <= 1024px) {
   .page {
+    --block-size: min(100vh, 768px);
     padding: 20px 20px 0 20px;
     width: 1024px;
-    max-block-size: min(100vh, 768px);
+    max-block-size: var(--block-size);
   }
   .header {
     grid-template-columns: 2fr 1fr 1fr 2fr;
@@ -445,26 +448,10 @@
     grid-template-rows: 45px 639px 45px;
     min-block-size: 782px;
     grid-auto-rows: 0;
-    max-block-size: min(100vh, 768px);
+    max-block-size: var(--block-size);
   }
 }
 
 .no-margin {
   margin: 0;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --accent-color: #353430;
-    --text-shadow: #ffc2e6;
-    --title-dark-color: #000028;
-    --advice-text-color: #353430;
-    --link-shadow-color: #ff8dcb;
-    --header-theme-button-hover-color: #32312d66;
-    --header-title-text-shadow-color: #ff070f;
-    --background-picture: url(/images/cover-image-light.png);
-    --rec-visibility: none;
-    --title-decor-color: #ff8dcb;
-    --title-description-color: #353430;
-  }
 }

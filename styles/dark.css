@@ -16,6 +16,7 @@
   --title-decor-color: #ff070f;
   --title-description-color: #000028;
   --link-shadow-color: #ff070f;
+  --block-size: min(100vh, 668px);
   --gap-between-sections: 80px;
   --gap-between-content: 20px;
   --decorated-zone-width: 25px;
@@ -25,7 +26,6 @@
   */
 }
 
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
@@ -46,7 +46,7 @@
   grid-template-columns: repeat(3, 1fr);
   justify-items: end;
   align-items: start;
-  max-block-size: min(100vh, 668px);
+  max-block-size: var(--block-size);
   margin-block-end: 50px;
 }
 
@@ -256,7 +256,7 @@
   display: grid;
   max-block-size: 100vh;
   grid-template-rows: 176px 300px 148px 25px;
-  max-block-size: min(100vh, 668px);
+  max-block-size: var(--block-size);
 }
 
 .footer .header-title {
@@ -265,6 +265,7 @@
 
 @media (375px < width <= 768px) {
   .page {
+    --block-size: min(100vh, 1024px);
     width: 768px;
     height: 1024px;
     padding: 20px 20px 0 20px;
@@ -272,7 +273,7 @@
   .header {
     grid-template-rows: 283px 423px 255px 25px;
     grid-template-columns: 242px 121px 121px 242px;
-    max-block-size: min(100vh, 1024px);
+    max-block-size: var(--block-size);
     margin-block-end: 148px;
   }
   .header__theme-menu {
@@ -344,15 +345,16 @@
     grid-template-rows: 45px 1fr 45px;
     min-block-size: 984px;
     grid-auto-rows: 0;
-    max-block-size: min(100vh, 1024px);
+    max-block-size: var(--block-size);
   }
 }
 
 @media (768px < width <= 1024px) {
   .page {
+    --block-size: min(100vh, 768px);
     padding: 20px 20px 0 20px;
     width: 1024px;
-    max-block-size: min(100vh, 768px);
+    max-block-size: var(--block-size);
   }
   .header {
     grid-template-columns: 2fr 1fr 1fr 2fr;
@@ -449,10 +451,11 @@
     grid-template-rows: 45px 639px 45px;
     min-block-size: 782px;
     grid-auto-rows: 0;
-    max-block-size: min(100vh, 768px);
+    max-block-size: var(--block-size);
   }
 }
 
 .no-margin {
   margin: 0;
 }
+
