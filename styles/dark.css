@@ -273,7 +273,6 @@
   .header {
     grid-template-rows: 283px 423px 255px 25px;
     grid-template-columns: 242px 121px 121px 242px;
-    max-block-size: var(--block-size);
     margin-block-end: 148px;
   }
   .header__theme-menu {
@@ -343,9 +342,7 @@
   }
   .footer {
     grid-template-rows: 45px 1fr 45px;
-    min-block-size: 984px;
     grid-auto-rows: 0;
-    max-block-size: var(--block-size);
   }
 }
 
@@ -354,7 +351,6 @@
     --block-size: min(100vh, 768px);
     padding: 20px 20px 0 20px;
     width: 1024px;
-    max-block-size: var(--block-size);
   }
   .header {
     grid-template-columns: 2fr 1fr 1fr 2fr;
@@ -451,11 +447,9 @@
     grid-template-rows: 45px 639px 45px;
     min-block-size: 782px;
     grid-auto-rows: 0;
-    max-block-size: var(--block-size);
   }
 }
 
 .no-margin {
   margin: 0;
 }
-
