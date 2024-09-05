@@ -18,8 +18,10 @@
   grid-template-columns: repeat(3, 1fr);
   justify-items: end;
   align-items: start;
-  max-block-size: var(--block-size);
+  max-block-size: 100%;
   margin-block-end: 50px;
+  min-height: 668px;
+  height: 100vh;
 }
 
 .decorated-zone::before {
@@ -228,7 +230,8 @@
   display: grid;
   max-block-size: 100vh;
   grid-template-rows: 176px 300px 148px 25px;
-  max-block-size: var(--block-size);
+  min-height: 668px;
+  height: 100vh;
 }
 
 .footer .header-title {
@@ -245,7 +248,8 @@
   .header {
     grid-template-rows: 283px 423px 255px 25px;
     grid-template-columns: 242px 121px 121px 242px;
-    margin-block-end: 148px;
+    min-height: 1024px;
+    height: 100vh;
   }
   .header__theme-menu {
     grid-column-start: 4;
@@ -315,6 +319,8 @@
   .footer {
     grid-template-rows: 45px 1fr 45px;
     grid-auto-rows: 0;
+    min-height: 1024px;
+    height: 100vh;
   }
 }
 
@@ -328,6 +334,8 @@
     grid-template-columns: 2fr 1fr 1fr 2fr;
     grid-template-rows: 46px 403px 253px 25px;
     margin-block-end: 139px;
+    min-height: 768px;
+    height: 100vh;
   }
   .header__theme-menu-list {
     grid-column-start: 2;
@@ -419,6 +427,8 @@
     grid-template-rows: 45px 639px 45px;
     min-block-size: 782px;
     grid-auto-rows: 0;
+    min-height: 768px;
+    height: 100vh;
   }
 }
 
