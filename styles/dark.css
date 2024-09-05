@@ -10,13 +10,12 @@
   --title-dark-color: #000028;
   --advice-text-color: #f1b2ce;
   --header-theme-button-hover-color: #32312d66;
-  --header-title-text-shadow-color: #ff070f;
+  --header-title-text-shadow-color: #ff0070;
   --background-picture: url(/images/cover-image-dark.png);
   --rec-visibility: block;
-  --title-decor-color: #ff070f;
+  --title-decor-color: #ff0070;
   --title-description-color: #000028;
-  --link-shadow-color: #ff070f;
-  --block-size: min(100vh, 668px);
+  --link-shadow-color: #ff0070;
   --gap-between-sections: 80px;
   --gap-between-content: 20px;
   --decorated-zone-width: 25px;
