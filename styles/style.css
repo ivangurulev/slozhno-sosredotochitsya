@@ -223,7 +223,10 @@
 
 .gallery-image {
   max-width: 355px;
-  display: block;
+}
+
+.gallery-list-item {
+  display: flex;
 }
 
 .image-sunset {
