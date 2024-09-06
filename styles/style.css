@@ -226,7 +226,7 @@
 }
 
 .gallery-list-item {
-
+  display: flex;
 }
 
 .image-sunset {
