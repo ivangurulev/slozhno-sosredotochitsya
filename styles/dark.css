@@ -9,7 +9,7 @@
   --text-shadow: #db00ff;
   --title-dark-color: #000028;
   --advice-text-color: #f1b2ce;
-  --header-theme-button-hover-color: #32312d66;
+  --header-theme-button-hover-color: rgb(255, 0, 112, 0.4);
   --header-title-text-shadow-color: #ff0070;
   --background-picture: url(/images/cover-image-dark.png);
   --rec-visibility: block;

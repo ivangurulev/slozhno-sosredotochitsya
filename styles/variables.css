@@ -7,7 +7,7 @@
   --text-shadow: #DB00FF;
   --title-description-color: #000028;
   --advice-text-color: #F1B2CE;
-  --header-theme-button-hover-color: #32312D66;
+  --header-theme-button-hover-color: rgb(255, 0, 112, 0.4);;
   --header-title-text-shadow-color: #FF0070;
   --background-picture: url(/images/cover-image-dark.png);
   --link-shadow-color: #FF0070;
