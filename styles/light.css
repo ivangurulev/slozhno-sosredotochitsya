@@ -22,9 +22,7 @@
   */
 }
 
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   width: 375px;
   height: 668px;
   padding: 10px 10px 0 10px;
@@ -187,13 +185,24 @@
 
 .advice-text-link {
   text-shadow: 1px 1px 0 var(--link-shadow-color);
+  position: relative;
+  display: inline-block;
 }
 
-.advice-text-link:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: var(--advice-text-color);
+.advice-text-link:hover::after {
+  opacity: 1;
+}
+
+.advice-text-link::after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  height: 1px;
+  background: var(--advice-text-color);
+  z-index: -1;
 }
 
 .advice-text-link:focus-visible {
@@ -461,7 +470,6 @@
 .no-margin {
   margin: 0;
 }
-
 
 @media (prefers-color-scheme: light) {
   :root {
