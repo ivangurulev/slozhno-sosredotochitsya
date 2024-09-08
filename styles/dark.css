@@ -463,7 +463,6 @@
   }
   .footer {
     grid-template-rows: 45px 639px 45px;
-    min-block-size: 782px;
     grid-auto-rows: 0;
     min-height: 768px;
     height: 100vh;
