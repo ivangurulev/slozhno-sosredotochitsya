@@ -4,9 +4,9 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   width: 375px;
   height: 668px;
-  padding: 10px 10px 0 10px;
   background-image: var(--background-picture);
-
+  padding: 0px;
+  margin: 0px;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -14,6 +14,7 @@
 }
 
 .header {
+  padding: 10px 10px 0 10px;
   display: grid;
   grid-template-rows: 176px 300px 148px 25px;
   grid-template-columns: repeat(3, 1fr);
@@ -259,7 +260,6 @@
   .page {
     width: 768px;
     height: 1024px;
-    padding: 20px 20px 0 20px;
   }
   .header {
     grid-template-rows: 283px 423px 255px 25px;
@@ -282,6 +282,7 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   .content {
+    padding: 20px 20px 0 20px;
     gap: var(--gap-between-sections);
   }
   .why {
@@ -344,7 +345,6 @@
 
 @media (768px < width <= 1024px) {
   .page {
-    padding: 20px 20px 0 20px;
     width: 1024px;
   }
   .header {
