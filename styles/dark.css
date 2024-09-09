@@ -6,16 +6,16 @@
 
 .page.theme_dark {
   --accent-color: #ff0070;
-  --text-shadow: #DB00FF;
+  --text-shadow: #db00ff;
   --title-description-color: #000028;
   --title-dark-color: #000028;
-  --advice-text-color: #F1B2CE;
+  --advice-text-color: #f1b2ce;
   --header-theme-button-hover-color: rgb(255, 0, 112, 0.4);
-  --header-title-text-shadow-color: #FF0070;
+  --header-title-text-shadow-color: #ff0070;
   --background-picture: url(/images/cover-image-dark.png);
-  --link-shadow-color: #FF0070;
+  --link-shadow-color: #ff0070;
   --rec-visibility: block;
-  --title-decor-color: #FF0070;
+  --title-decor-color: #ff0070;
   --gap-between-sections: 80px;
   --gap-between-content: 20px;
   --decorated-zone-width: 25px;

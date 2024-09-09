@@ -6,6 +6,7 @@
   height: 668px;
   padding: 10px 10px 0 10px;
   background-image: var(--background-picture);
+
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -22,6 +23,8 @@
   margin-block-end: 29px;
   min-height: 668px;
   height: 100vh;
+  position: relative; /* Убедитесь, что дочерние элементы находятся поверх */
+  z-index: 1;
 }
 
 .decorated-zone::before {
