@@ -118,8 +118,7 @@
 .title-decor {
   background-color: var(--title-decor-color);
   height: min-content;
-  padding: 0;
-  margin: 0;
+
 }
 .main__section-title {
   font-weight: 700;
@@ -149,7 +148,7 @@
 }
 .advice-list {
   display: flex;
-  gap: var(--gap-between-content);
+  gap: 20px;
   flex-direction: column;
 }
 .advice-text-link {
@@ -220,7 +219,7 @@
 .footer {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr min-content;
-  height: 100vh;
+  min-height: max(100vh, 668px);
 }
 .footer .header-title {
   align-self: center;
@@ -230,7 +229,105 @@
 .thin-text {
   font-weight: 400;
 }
-@media (375px < width <= 768px) {
+/* Я добавил ещё один медиазапрос, чтобы исправить ваше замечание.
+ В основном стили взяты из другого медиазапроса, который находится ниже.
+ Теперь при разрешении от 375px до 570px, часть секций будет в виде колонок, для лучшего восприятия.
+ Надеюсь, я правильно понял, что вы посоветовали сделать.*/
+@media (375px < width <= 570px) {
+  .page {
+    --gap-between-content: 2.6%;
+    padding: 2.6% 2.6% 0 2.6%;
+  }
+  .header {
+    grid-template-rows: 1fr auto 1fr min-content;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    margin-block-end: 42px;
+    min-height: max(100vh, 1024px);
+  }
+  .header__theme-menu {
+    grid-column-start: 4;
+    padding-block-start: 20px;
+  }
+  .decorated-zone::after {
+    margin-block-end: 40px;
+  }
+  .header-description {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    margin: 0;
+    margin-block-start: 25px;
+  }
+  .header .header-title {
+    grid-column-start: span 4;
+    padding-block-end: 5px;
+    justify-self: flex-start;
+    margin-block-start: 10px;
+    margin-inline-start: -2.6%;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  .advice-title {
+    margin: 0;
+    align-self: auto;
+  }
+  .how h2 ~ h3 {
+    margin-block-end: 20px;
+  }
+  .advice-list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .section {
+    display: block;
+  }  
+  .why {
+    display: flex;
+    flex-direction: column;
+  } 
+  .what {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery .advice-title {
+    margin-block-end: var(--gap-between-content);
+  }
+  .gallery-image {
+    max-width: none;
+    min-width: 29.8%;
+    block-size: 100%;
+    inline-size: 100%;
+    object-fit: cover;
+  }
+  .gallery-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(29.8%, 1fr));
+
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+    gap: clamp(0.625rem, -0.5769rem + 5.1282vw, 1.25rem);
+  }
+  .footer .header-title {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  .footer {
+    grid-template-rows: 1fr 1fr 1fr auto;
+    grid-auto-rows: 0;
+    min-height: max(100vh, 1024px);
+    margin-block-start: 80px;
+  }
+
+}
+@media (570px < width <= 768px) {
   .page {
     --gap-between-content: 2.6%;
     padding: 2.6% 2.6% 0 2.6%;
@@ -280,11 +377,13 @@
   .section {
     display: grid;
     grid-template-columns: 1fr 2fr;
-  }
+  }  
   .why {
-    gap: var(--gap-between-content);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.6%;
     margin-block-end: var(--gap-between-sections);
-  }
+  } 
   .why .advice-list {
     grid-column-start: 2;
   }
@@ -300,7 +399,7 @@
   .how {
     grid-template-rows: min-content 12.7% auto;
     grid-template-columns: clamp(11.5625rem, 8.521rem + 12.9771vw, 14.75rem) 1fr;
-    column-gap: var(--gap-between-content);
+    column-gap: 2.6%;
     row-gap: var(--gap-between-content);
     margin-block-end: 60px;
   }
@@ -346,6 +445,7 @@
     margin-block-start: 80px;
   }
 }
+
 /*Изменил медиазапрос ниже, чтобы на разрешениях свыше 1024px, не отображалась мобильная версия*/
 @media (768px < width) {
   .page {
@@ -386,6 +486,7 @@
     grid-column-start: 3;
     align-self: center;
     margin-block-end: 20px;
+    margin-block-start: 0;
   }
   .advice-title {
     margin: 0;
@@ -417,10 +518,10 @@
     grid-row-start: 2;
     grid-column: span 3;
     justify-content: center;
-    max-width: 96%;
+    max-width: 100%;
     flex-wrap: wrap;
     column-gap: 2%;
-    row-gap: var(--gap-between-content);
+    row-gap: 20px;
   }
   .what .advice-list .advice-list-item {
     max-inline-size: 315px;

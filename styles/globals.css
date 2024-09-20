@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
 }
+/* *,*::before,*::after {outline: 1px solid red} */
 body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
