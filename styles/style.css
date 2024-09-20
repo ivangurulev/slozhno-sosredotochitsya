@@ -118,7 +118,6 @@
 .title-decor {
   background-color: var(--title-decor-color);
   height: min-content;
-
 }
 .main__section-title {
   font-weight: 700;
@@ -229,11 +228,12 @@
 .thin-text {
   font-weight: 400;
 }
-/* Я добавил ещё один медиазапрос, чтобы исправить ваше замечание.
+/* Здравствуйте, если честно я не совсем понял, что вы посоветовали сделать в том замечании, где у карточки умещается 1-2 слова в строчку.
+ Если там убрать gap между столбцами, то всё равно ничего не будет умещаться, других мыслей не появилось. Я добавил ещё один медиазапрос, чтобы попытаться исправить это.
  В основном стили взяты из другого медиазапроса, который находится ниже.
- Теперь при разрешении от 375px до 570px, часть секций будет в виде колонок, для лучшего восприятия.
- Надеюсь, я правильно понял, что вы посоветовали сделать.*/
-@media (375px < width <= 570px) {
+ Теперь при разрешении от 375px до 615px, часть секций будет в виде одной колонны, для лучшего восприятия.
+ Надеюсь, я правильно понял, что нужно было сделать.*/
+@media (375px < width <= 615px) {
   .page {
     --gap-between-content: 2.6%;
     padding: 2.6% 2.6% 0 2.6%;
@@ -284,11 +284,11 @@
   }
   .section {
     display: block;
-  }  
+  }
   .why {
     display: flex;
     flex-direction: column;
-  } 
+  }
   .what {
     display: flex;
     flex-direction: column;
@@ -312,7 +312,7 @@
       "sunset sunset ice-cream"
       "tape books ice-cream"
       "tape street street";
-    gap: clamp(0.625rem, -0.5769rem + 5.1282vw, 1.25rem);
+    gap: clamp(0.625rem, -0.3516rem + 4.1667vw, 1.25rem);
   }
   .footer .header-title {
     margin: 0;
@@ -325,9 +325,8 @@
     min-height: max(100vh, 1024px);
     margin-block-start: 80px;
   }
-
 }
-@media (570px < width <= 768px) {
+@media (615px < width <= 768px) {
   .page {
     --gap-between-content: 2.6%;
     padding: 2.6% 2.6% 0 2.6%;
@@ -377,13 +376,13 @@
   .section {
     display: grid;
     grid-template-columns: 1fr 2fr;
-  }  
+  }
   .why {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2.6%;
     margin-block-end: var(--gap-between-sections);
-  } 
+  }
   .why .advice-list {
     grid-column-start: 2;
   }
