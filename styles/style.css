@@ -584,3 +584,13 @@
     margin-block-start: 75px;
   }
 }
+
+::selection {
+  background-color: #ad39dbe0; 
+  color: #ffffff; 
+}
+
+::-moz-selection { /* Для Firefox */
+  background-color: #ad39dbe0; 
+  color: #ffffff; 
+}
