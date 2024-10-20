@@ -8,6 +8,9 @@
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
 }
 
 .header {
